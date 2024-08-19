@@ -5,7 +5,6 @@ from typing import Any, Dict, List, Optional, Union
 
 from dbcat.api import scan_sources
 from dbcat.catalog import Catalog, CatSource
-from goog_stats import Stats
 
 from piicatcher import detectors
 from piicatcher.detectors import DatumDetector, MetadataDetector, detector_registry
@@ -61,7 +60,6 @@ def scan_database(
     exit_code = 0
 
     with catalog.managed_session:
-        Stats().record_event("/pip/piicatcher", "scanning source")
         scan_sources(
             catalog=catalog,
             source_names=[source.name],

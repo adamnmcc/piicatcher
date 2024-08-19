@@ -1387,16 +1387,6 @@ files = [
     {file = "future-0.18.3.tar.gz", hash = "sha256:34a17436ed1e96697a86f9de3d15a3b0be01d8bc8de9c1dffd59fb8234ed5307"},
 ]
 
-[[package]]
-name = "goog-stats"
-version = "0.1.2"
-description = ""
-optional = false
-python-versions = ">=3.8,<=3.10.8"
-files = [
-    {file = "goog_stats-0.1.2-py3-none-any.whl", hash = "sha256:8c9466024b7203ea56348f59e2162b8d5b808d1caea655ea4bba6c31e1b7d7d9"},
-    {file = "goog_stats-0.1.2.tar.gz", hash = "sha256:a5c1583b632b094fdda302f19f32cdf407aa540bf8ca5e41d73bfe3fd4aba651"},
-]
 
 [package.dependencies]
 logging = ">=0.4.9.6,<0.5.0.0"

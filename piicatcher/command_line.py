@@ -30,12 +30,11 @@ from piicatcher.api import (
 )
 from piicatcher.generators import SMALL_TABLE_MAX
 from piicatcher.scanner import data_logger, scan_logger
-from goog_stats import Stats
 
 app = typer.Typer()
 
 LOGGER = logging.getLogger(__name__)
-analytics = Stats(__google_analytics_tid__)
+
 
 
 class TyperLoggerHandler(logging.Handler):
