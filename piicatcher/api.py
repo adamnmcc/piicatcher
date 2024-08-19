@@ -88,7 +88,6 @@ def scan_database(
                 exclude_table_regex=exclude_table_regex,
             )
 
-            Stats().record_event("/pip/piicatcher", "scan_type: {}".format(scan_type))
             detector_list = [
                 detector()
                 for detector in detectors.detector_registry.get_all().values()
@@ -123,9 +122,6 @@ def scan_database(
                     for detector in detectors.detector_registry.get_all().values()
                     if issubclass(detector, DatumDetector)
                 ]
-                Stats().record_event(
-                    "/pip/piicatcher", "scan_type: {}".format(scan_type)
-                )
                 data_scan(
                     catalog=catalog,
                     detectors=detector_list,
@@ -172,7 +168,6 @@ def scan_database(
 
 
 def list_detectors() -> List[str]:
-    Stats().record_event("/pip/piicatcher", "list detectors")
     return list(detector_registry.get_all().keys())
 
 
